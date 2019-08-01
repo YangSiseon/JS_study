@@ -29,6 +29,9 @@ input {
     border-bottom: solid white 2px;
     width: 300px;
     height: 30px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
 
 input::placeholder {
@@ -45,6 +48,7 @@ button {
     background: none;
     border: none;
     outline: none;
+    color: red;
 }
 
 li {
