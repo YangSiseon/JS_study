@@ -11,7 +11,7 @@ import videoRouter from "./routers/videoRouter";
 const app = express();
 
 app.use(helmet());
-app.use(cookieParser);
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
@@ -19,6 +19,7 @@ app.use(morgan("dev"));
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
+
 // const localMiddleware = (req, res, next) => {
 //     console.log("here is middleware");
 //     next(); //다음 함수를 실행
@@ -30,4 +31,5 @@ app.use(routes.videos, videoRouter);
 
 // // app.get("/", localMiddleware, handleHome);
 // app.get("/", handleHome);
+
 export default app;
